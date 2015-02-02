@@ -1,0 +1,11 @@
+Problem:
+
+We found this program file on some systems. But we need the address of the 'find_string' function to do anything useful! Can you find it for us?
+
+Notes:
+
+objdump -D problem | grep "find"
+
+Flag:
+
+8048444

