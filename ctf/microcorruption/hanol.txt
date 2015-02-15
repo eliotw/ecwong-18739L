@@ -1,0 +1,11 @@
+4534:  3e40 1c00      mov   #0x1c, r14
+
+Set r14 to 28
+
+Later this is used as the second argument to get, so it will accept 28 bytes
+
+Since the password is able to be overwritten by more than 16 characters, we are able to bypass the validation
+
+Password:
+
+41414141414141414141414141414141d7d7

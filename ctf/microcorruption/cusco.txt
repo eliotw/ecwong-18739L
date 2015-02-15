@@ -1,0 +1,11 @@
+According to the overview the buffer overflow has been fixed in this level
+
+however they are still passing the argument of 0x30 to get, so a buffer overflow
+is still possible
+
+However, what has changed is that it is no longer checking the string for
+the password. It is instead checking the return value of the check password
+routine
+
+However, since we can overwrite the buffer by 32 bytes, we can overwrite the return address of the function.
+This would allow us to jump to the unlock code address: 4528
