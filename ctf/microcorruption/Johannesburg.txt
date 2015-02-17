@@ -1,4 +1,0 @@
-Simple buffer overflow with stack canary
-
-Password:
-1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e6645
