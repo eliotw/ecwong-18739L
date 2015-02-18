@@ -1,9 +1,0 @@
-Still accepting 48 bytes into the password buffer
-
-Pretty much the same as Whitehorse, the only problem that I ran into
-was that my previous exploit had a nullbyte when trying to push 0x7f
-onto the stack. As a result, I replaced that operation with a mov and 
-subtraction to get 0x7f.
-
-Exploit:
-3e4011113e8092100e12b0124c459090ee43

@@ -1,9 +1,0 @@
-Problem:
-
-
-
-Notes:
-
-It seems that the "safe_buffer"'s buffer is actually only 512 bytes, where as most notes allow 1024 bytes
-
-Flag:
