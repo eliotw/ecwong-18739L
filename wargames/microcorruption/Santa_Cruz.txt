@@ -1,0 +1,26 @@
+This time the lock is accepting both username and password
+
+0x2404 - Location of username
+Can be 0x63 bytes long
+Copied into 0x43a2
+
+Password also 0x63 bytes long
+Copied into 0x43b5
+
+We can see here that the username buffer will spill over into the password buffer
+
+Something in username seems to dictate how long the password should be
+
+18 and 19
+
+Password must be 16 byets in order for null byte to be written to 17th byte,
+which is then checked at the end
+
+43rd and 44th byte of username is ret address
+
+Need to return to 0x463a
+
+Exploit:
+
+Username: 414141414141414141414141414141414110FF41414141414141414141414141414141414141414141413a46
+Password: 4141414141414141414141414141414141

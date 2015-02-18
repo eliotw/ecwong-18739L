@@ -1,0 +1,18 @@
+Problem:
+
+We found this program snippet.txt, but we're having some trouble figuring it out. What's the value of %eax when the last instruction (the NOP) runs?
+
+Notes:
+
+ebx = 16099
+eax = 10791
+ecx = 10208
+
+eax*ebx -> ebx = 173724309
+ebx-eax = 173713518
+eax = ebx
+eax+exc -> eax = 173723726
+
+Flag:
+
+173723726

