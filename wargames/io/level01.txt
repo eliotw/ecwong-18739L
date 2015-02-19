@@ -1,0 +1,8 @@
+Checks the 3 digit password
+0x0804808f <+15>:   cmp    $0x10f,%eax
+
+Input:
+271
+
+Flag:
+3ywr07ZFw5IsdKzU
