@@ -1,0 +1,15 @@
+<div id="login">
+    <form action="{% url 'prob.views.login' %}" method="POST">
+        {% csrf_token %}
+        {{ loginForm }}
+        <input type="submit" value="Submit" />
+    </form>
+</div>
+
+<div id="register">
+    <form action="{% url 'prob.views.register' %}" method="POST">
+        {% csrf_token %}
+        {{ registerForm }}
+        <input type="submit" value="Submit" />
+    </form>
+</div>
