@@ -3,19 +3,17 @@ from django.http import HttpResponse
 from django.template import RequestContext, loader
 
 from prob.models import appUser
-from prob.forms import LoginForm
+from prob.forms import *
 
 # Create your views here.
 
 def index(request):
     context = {}
 
-    form = LoginForm()
-    print form
+    loginForm = LoginForm()
+    registerForm = RegisterForm()
 
-    print "test"
-
-    return render(request, 'index.html', {'form': form})
+    return render(request, 'index.html', {'loginForm':loginForm, 'registerForm':registerForm})
 
 def login(request):
 
@@ -31,6 +29,23 @@ def login(request):
             # TODO say login error
             return redirect('/index/')
     context = {}
-    
 
     return render(request, 'home.html', context)
+
+def register(request):
+
+    context = {}
+
+    u = RegisterForm()
+
+    sql = "SELECT * FROM prob_appUser WHERE username = '" + request.POST['username'] + "'"
+
+    if(sum(1 for result in appUser.objects.raw(sql))):
+        msg = "The username has been already taken."
+    else:
+        msg = "Sorry, our registration has been disabled"
+
+
+    context['msg'] = msg
+
+    return render(request, 'register.html', context)

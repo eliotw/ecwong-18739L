@@ -1,15 +1,15 @@
-<!--<form action="{% url 'prob.views.login' %}" method="POST">
-    {% csrf_token %}
-    <input type="text" name="username" placeholder="Username">
-    <input type="password" name="password" placeholder="Password">
-    <input type="submit">
-</form>-->
+<div id="login">
+    <form action="{% url 'prob.views.login' %}" method="POST">
+        {% csrf_token %}
+        {{ loginForm }}
+        <input type="submit" value="Submit" />
+    </form>
+</div>
 
-<form action="{% url 'prob.views.login' %}" method="POST">
-    {% csrf_token %}
-    {{ form }}
-
-    <input type="submit" value="Submit" />
-
-</form>
-
+<div id="register">
+    <form action="{% url 'prob.views.register' %}" method="POST">
+        {% csrf_token %}
+        {{ registerForm }}
+        <input type="submit" value="Submit" />
+    </form>
+</div>
