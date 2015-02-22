@@ -11,19 +11,7 @@ Successfully logged in.
     </div>
 </div>
 <div class="row">
-    <div class="large-3 columns ">
-        <div class="panel">
-            <h5><a href="#">Your Name</a></h5>
-            <div class="section-container vertical-nav" data-section data-options="deep_linking: false; one_up: true">
-                <section class="section">
-                <h5 class="title"><a href="{% url 'prob.views.upload' %}">Upload a news story</a></h5>
-                </section>
-                <section class="section">
-                    <h5 class="title"><a href="#">Logout</a></h5>
-                </section>
-            </div>
-        </div>
-    </div>
+    {% include "nav.html" %}
     <div class="large-9 columns">
         {% for story in news %}
         <div class="row">

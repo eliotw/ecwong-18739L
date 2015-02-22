@@ -11,7 +11,7 @@
     <div class="large-6 columns">
         <div class="panel">
             <p class="welcome">Login</p>
-            <form action="{% url 'prob.views.login' %}" method="POST">
+            <form action="{% url 'prob.views.login_view' %}" method="POST">
             {% csrf_token %}
             {{ loginForm.non_field_errors }}
             <div class="row collapse">
@@ -22,12 +22,22 @@
                     {{ loginForm.username }}
                 </div>
             </div>
+            <div class="row error">
+                <div class="small-10 small-offset-2 columns">
+                {{ loginForm.username.errors }}
+                </div>
+            </div>
             <div class="row collapse">
                 <div class="small-2 columns ">
                     <span class="prefix"><i class="fi-lock"></i></span>
                 </div>
                 <div class="small-10 columns ">
                     {{ loginForm.password }}
+                </div>
+            </div>
+            <div class="row error">
+                <div class="small-10 small-offset-2 columns">
+                {{ loginForm.password.errors }}
                 </div>
             </div>
             <input type="submit" value="Login" class="button">
