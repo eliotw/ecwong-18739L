@@ -1,15 +1,87 @@
-<div id="login">
-    <form action="{% url 'prob.views.login' %}" method="POST">
-        {% csrf_token %}
-        {{ loginForm }}
-        <input type="submit" value="Submit" />
-    </form>
+{% extends "foundation/base.html" %}
+{% load staticfiles %}
+
+{% block css %}
+<link href="{% static "foundation/css/index.css" %}" rel="stylesheet"/>
+{% endblock %}
+
+{% block base_body %}
+
+<div class="row">
+    <div class="large-6 columns">
+        <div class="panel">
+            <p class="welcome">Login</p>
+            <form action="{% url 'prob.views.login' %}" method="POST">
+            {% csrf_token %}
+            {{ loginForm.non_field_errors }}
+            <div class="row collapse">
+                <div class="small-2  columns">
+                    <span class="prefix"><i class="fi-torso"></i></span>
+                </div>
+                <div class="small-10  columns">
+                    {{ loginForm.username }}
+                </div>
+            </div>
+            <div class="row collapse">
+                <div class="small-2 columns ">
+                    <span class="prefix"><i class="fi-lock"></i></span>
+                </div>
+                <div class="small-10 columns ">
+                    {{ loginForm.password }}
+                </div>
+            </div>
+            <input type="submit" value="Login" class="button">
+            </form>
+          </div>
+    </div>
+    
+    <div class="large-6 columns">
+        <div class="panel">
+            <p class="welcome">Register</p>
+            <form action="{% url 'prob.views.index' %}" method="POST">
+            {% csrf_token %}
+            {{ registerForm.non_field_errors }}
+            {{ registerForm.username.errors }}
+            <div class="row collapse">
+                <div class="small-2  columns">
+                    <span class="prefix"><i class="fi-torso"></i></span>
+                </div>
+                <div class="small-10  columns">
+                    {{ registerForm.username }}
+                </div>
+            </div>
+            <div class="row collapse">
+                <div class="small-12 columns errors">
+                </div>
+            </div>
+            <div class="row collapse">
+                <div class="small-2  columns">
+                    <span class="prefix"><i class="fi-mail"></i></span>
+                </div>
+                <div class="small-10  columns">
+                    <input type="text" placeholder="email">
+                </div>
+            </div>
+            <div class="row collapse">
+                <div class="small-2 columns ">
+                    <span class="prefix"><i class="fi-lock"></i></span>
+                </div>
+                <div class="small-10 columns ">
+                    <input type="text" placeholder="password">
+                </div>
+            </div>
+            <div class="row collapse">
+                <div class="small-2 columns ">
+                    <span class="prefix"><i class="fi-lock"></i></span>
+                </div>
+                <div class="small-10 columns ">
+                    <input type="text" placeholder="confirm password">
+                </div>
+            </div>
+            <input type="submit" value="Sign Up!" class="button">
+            </form>
+          </div>
+    </div>
 </div>
 
-<div id="register">
-    <form action="{% url 'prob.views.register' %}" method="POST">
-        {% csrf_token %}
-        {{ registerForm }}
-        <input type="submit" value="Submit" />
-    </form>
-</div>
+{% endblock %}

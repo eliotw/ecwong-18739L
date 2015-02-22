@@ -8,3 +8,13 @@ class appUser(models.Model):
 
     def __str__(self):
         return self.username
+
+class News(models.Model):
+
+    user = models.ForeignKey(appUser)
+
+    text = models.CharField(max_length=1000)
+    pub_date = models.DateTimeField('date published')
+
+    def __unicode__(self):
+        return self.text

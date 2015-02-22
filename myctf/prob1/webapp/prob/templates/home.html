@@ -1,1 +1,50 @@
+{% extends "foundation/base.html" %}
 Successfully logged in. 
+
+{% block base_body %}
+
+<div class="row">
+    <div class="large-12 columns">
+        <div class="panel">
+            <h1>News Feed</h1>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="large-3 columns ">
+        <div class="panel">
+            <h5><a href="#">Your Name</a></h5>
+            <div class="section-container vertical-nav" data-section data-options="deep_linking: false; one_up: true">
+                <section class="section">
+                <h5 class="title"><a href="{% url 'prob.views.upload' %}">Upload a news story</a></h5>
+                </section>
+                <section class="section">
+                    <h5 class="title"><a href="#">Logout</a></h5>
+                </section>
+            </div>
+        </div>
+    </div>
+    <div class="large-9 columns">
+        {% for story in news %}
+        <div class="row">
+            <div class="large-2 columns small-3"><img src="http://placehold.it/80x80&text=[img]"/></div>
+            <div class="large-10 columns">
+                <p><strong>{{story.user.username}} said:</strong> {{ story.text }}</p>
+            </div>
+        </div>
+        <hr/>
+        {% endfor %}
+    </div>
+</div>
+<footer class="row">
+    <div class="large-12 columns">
+        <hr/>
+        <div class="row">
+            <div class="large-5 columns">
+                <p>© Copyright no one at all.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+{% endblock %}

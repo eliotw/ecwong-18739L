@@ -1,0 +1,31 @@
+.panel .errorlist li {
+    color: red;
+}
+
+.panel {
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin-top: 30px;
+}
+.panel i {
+  font-size: 30px;
+  line-height: 50px;
+  color: #999;
+}
+.panel form input, .panel form span {
+  height: 50px;
+}
+.panel .welcome {
+  font-size: 26px;
+  text-align: center;
+  margin-left: 0;
+}
+.panel p {
+  font-size: 13px;
+  font-weight: 200;
+  margin-left: 25%;
+}
+.panel .button {
+  margin-left: 35%;
+}

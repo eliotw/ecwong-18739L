@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.template import RequestContext, loader
 
-from prob.models import appUser
+from prob.models import *
 from prob.forms import *
 
 # Create your views here.
@@ -10,10 +10,21 @@ from prob.forms import *
 def index(request):
     context = {}
 
-    loginForm = LoginForm()
-    registerForm = RegisterForm()
+    if request.method == 'GET':
+        loginForm = LoginForm()
+        registerForm = RegisterForm()
 
-    return render(request, 'index.html', {'loginForm':loginForm, 'registerForm':registerForm})
+        return render(request, 'index.html', {'loginForm':loginForm, 'registerForm':registerForm})
+
+    u = RegisterForm(request.POST)
+    
+    if u.is_valid():
+        return render(request, 'register.html', context)
+
+    loginForm = LoginForm()
+
+    return render(request, 'index.html', {'loginForm':loginForm, 'registerForm':u})
+
 
 def login(request):
 
@@ -32,20 +43,27 @@ def login(request):
 
     return render(request, 'home.html', context)
 
+def home(request):
+
+    news = News.objects.all();
+
+    context = {'news':news}
+
+    return render(request, 'home.html', context)
+
+def upload(request):
+    
+    return render(request, 'upload.html', {})
+
 def register(request):
 
     context = {}
 
-    u = RegisterForm()
+    u = RegisterForm(request.POST)
 
-    sql = "SELECT * FROM prob_appUser WHERE username = '" + request.POST['username'] + "'"
+    if u.is_valid():
+        return render(request, 'register.html', context)
 
-    if(sum(1 for result in appUser.objects.raw(sql))):
-        msg = "The username has been already taken."
-    else:
-        msg = "Sorry, our registration has been disabled"
+    loginForm = LoginForm()
 
-
-    context['msg'] = msg
-
-    return render(request, 'register.html', context)
+    return render(request, 'index.html', {'loginForm':loginForm, 'registerForm':u})
