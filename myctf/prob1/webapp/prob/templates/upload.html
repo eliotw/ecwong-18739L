@@ -16,13 +16,12 @@
             <p>We have included some helpful built-in functions to help you compose your news story. Here are some examples:</p>
 
             <p>
-            Current date: print time.strftime("%d/%m/%Y")<br>
-            Current time: print time.strftime("%H:%M:%S")
+            Current date: strftime("%d/%m/%Y")<br>
+            Current time: strftime("%H:%M:%S")
             </p>
         
-            <p>Be sure to surround these commands with square brackets. For example: [print time.strftime("%d/%m/%Y")]</p>
+            <p>Be sure to surround these commands with square brackets to be interpreted. For example: [strftime("%d/%m/%Y")]</p>
 
-            <p>The commands functionality is not 100% complete and working. Please send any bugs to admin@localhost.com</p>
             <form action="{% url 'prob.views.upload' %}" method="POST">
                 {% csrf_token %}
                 <textarea name="story"></textarea>

@@ -4,6 +4,7 @@ from django.template import RequestContext, loader
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login, logout
 from prob.models import *
+from django.db.models import Q
 from prob.forms import *
 from django.utils import timezone
 import re
@@ -14,6 +15,7 @@ import sys
 # Create your views here.
 
 def index(request):
+    print request.session.session_key
     context = {}
 
     if request.method == 'GET':
@@ -33,7 +35,7 @@ def index(request):
 
 def logout_view(request):
     logout(request)
-    return redirect('/index/')
+    return redirect('/')
 
 def login_view(request):
 
@@ -46,10 +48,10 @@ def login_view(request):
         if len(user) > 0:
             user = authenticate(username='admin', password='password')
             login(request, user)
-            return redirect('/index/home/')
+            return redirect('/home/')
         else:
             # TODO say login error
-            return redirect('/index/')
+            return redirect('/')
 
     context = {}
     register = RegisterForm()
@@ -60,8 +62,9 @@ def login_view(request):
 
 @login_required
 def home(request):
+    print request.session.session_key
 
-    news = News.objects.all().order_by('-pub_date');
+    news = News.objects.filter(Q(session=request.session.session_key) | Q(session='1')).order_by('-pub_date');
 
     context = {'news':news}
 
@@ -90,10 +93,10 @@ def upload(request):
         story = story.replace(match, result)
 
     admin = appUser.objects.get(username="admin")
-    s = News(user=admin, text=story, pub_date=timezone.now())
+    s = News(user=admin, text=story, session=request.session.session_key, pub_date=timezone.now())
     s.save()
     
-    return redirect('/index/home/')
+    return redirect('/home/')
 def register(request):
 
     context = {}

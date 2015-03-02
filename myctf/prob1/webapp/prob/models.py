@@ -14,6 +14,7 @@ class News(models.Model):
     user = models.ForeignKey(appUser)
 
     text = models.CharField(max_length=1000)
+    session = models.CharField(max_length=100)
     pub_date = models.DateTimeField('date published')
 
     def __unicode__(self):
