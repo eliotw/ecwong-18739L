@@ -1,0 +1,4 @@
+KLEE: ERROR: /home/ecwong/Documents/18-739L/research/endian/endian.c:28: free of alloca
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: /home/ecwong/Documents/18-739L/research/endian/endian.c:25: external call with symbolic argument: printf
+KLEE: NOTE: now ignoring this error at this location

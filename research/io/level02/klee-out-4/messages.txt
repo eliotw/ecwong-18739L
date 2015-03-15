@@ -1,0 +1,2 @@
+KLEE: ERROR: /home/ecwong/Documents/18-739L/research/io/level02/level02.c:34: external call with symbolic argument: sprintf
+KLEE: NOTE: now ignoring this error at this location

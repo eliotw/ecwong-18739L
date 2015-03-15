@@ -1,0 +1,6 @@
+KLEE: WARNING: undefined reference to function: atoi
+KLEE: WARNING: undefined reference to function: printf
+KLEE: WARNING: undefined reference to function: puts
+KLEE: WARNING: undefined reference to function: setresuid
+KLEE: WARNING: undefined reference to function: signal
+KLEE: WARNING: undefined reference to function: sprintf

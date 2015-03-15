@@ -1,0 +1,6 @@
+Error: external call with symbolic argument: sprintf
+File: /home/ecwong/Documents/18-739L/research/io/level02/level02.c
+Line: 34
+assembly.ll line: 69
+Stack: 
+	#000000069 in main () at /home/ecwong/Documents/18-739L/research/io/level02/level02.c:34

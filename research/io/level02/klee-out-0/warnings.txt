@@ -1,0 +1,6 @@
+KLEE: WARNING: undefined reference to function: atoi
+KLEE: WARNING: undefined reference to function: puts
+KLEE: WARNING: undefined reference to function: setresuid
+KLEE: WARNING: undefined reference to function: signal
+KLEE: WARNING ONCE: calling external: puts(30926432)
+KLEE: WARNING ONCE: calling external: atoi(30936064)

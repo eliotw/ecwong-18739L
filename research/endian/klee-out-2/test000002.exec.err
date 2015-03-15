@@ -1,0 +1,7 @@
+Error: external call with symbolic argument: printf
+File: /home/ecwong/Documents/18-739L/research/endian/endian.c
+Line: 25
+assembly.ll line: 76
+Stack: 
+	#000000076 in orig_main (str_answer=40187664) at /home/ecwong/Documents/18-739L/research/endian/endian.c:25
+	#100000027 in main () at /home/ecwong/Documents/18-739L/research/endian/endian.c:9
