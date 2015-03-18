@@ -20,5 +20,9 @@ The upload form will accept a file and checks that it has a jpg/jpeg file extens
 
 ### Walkthrough
 
+In order to get a file to pass the checker, it will need to have a extension of .jpg or .jpeg. Also it will need `ÿØÿà` at the beginning of the file because of the file signature checker. Because of the way the server renderes the jpeg image, it will be possible to place PHP code within the file that gets executed when opening the file for viewing.
+
+Once a file containing php has been created, the attacker will need to add PHP code to include the other image into the uploaded file. This will allow the attacker to view the image file.
+
 
 
