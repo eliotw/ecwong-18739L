@@ -1,0 +1,8 @@
+KLEE: WARNING: undefined reference to function: atoi
+KLEE: WARNING: undefined reference to function: printf
+KLEE: WARNING: undefined reference to function: puts
+KLEE: WARNING: undefined reference to function: setresuid
+KLEE: WARNING: undefined reference to function: signal
+KLEE: WARNING ONCE: calling external: printf(34944560)
+KLEE: WARNING ONCE: calling external: puts(34944336)
+KLEE: WARNING ONCE: calling external: atoi(35121648)
