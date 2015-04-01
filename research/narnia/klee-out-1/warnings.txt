@@ -1,7 +1,0 @@
-KLEE: WARNING: undefined reference to function: printf
-KLEE: WARNING: undefined reference to function: puts
-KLEE: WARNING: undefined reference to function: strncpy
-KLEE: WARNING: undefined reference to function: system
-KLEE: WARNING ONCE: calling external: puts(38664144)
-KLEE: WARNING ONCE: calling external: printf(38664592)
-KLEE: WARNING ONCE: calling external: strncpy(38908752, 38592624, 24)
