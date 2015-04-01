@@ -1,0 +1,21 @@
+klee --libc=uclibc -posix-runtime -emit-all-errors level02.o -sym-args 2 2 1
+PID: 16876
+Started: 2015-04-01 01:47:14
+BEGIN searcher description
+<InterleavedSearcher> containing 2 searchers:
+RandomPathSearcher
+WeightedRandomSearcher::CoveringNew
+</InterleavedSearcher>
+END searcher description
+Finished: 2015-04-01 01:47:15
+Elapsed: 00:00:01
+KLEE: done: explored paths = 20
+KLEE: done: avg. constructs per query = 87
+KLEE: done: total queries = 52
+KLEE: done: valid queries = 10
+KLEE: done: invalid queries = 42
+KLEE: done: query cex = 52
+
+KLEE: done: total instructions = 24122
+KLEE: done: completed paths = 20
+KLEE: done: generated tests = 20

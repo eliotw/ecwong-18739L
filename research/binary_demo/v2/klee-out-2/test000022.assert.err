@@ -1,0 +1,4 @@
+Error: ASSERTION FAIL: 0
+Stack: 
+	#000001108 in __user_main (argc=3, argv=47845648)
+	#100002454 in main (=3, =47845648)

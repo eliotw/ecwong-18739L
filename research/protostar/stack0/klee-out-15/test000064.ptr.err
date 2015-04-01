@@ -1,0 +1,15 @@
+Error: memory error: out of bound pointer
+File: /home/ecwong/klee-uclibc/libc/stdio/gets.c
+Line: 28
+assembly.ll line: 1076
+Stack: 
+	#000001076 in gets (s=49740224) at /home/ecwong/klee-uclibc/libc/stdio/gets.c:28
+	#100000216 in __user_main (argc=4, argv=46025200)
+	#200001000 in __uClibc_main (main=40942192, argc=4, argv=46025200, app_init=0, app_fini=0, rtld_fini=0, stack_end=0) at /home/ecwong/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#300004427 in main (=4, =46025200)
+Info: 
+	address: 49740288
+	next: object at 49740448 of size 4
+		MO3767[4] allocated at __user_main():  %modified = alloca i32
+	prev: object at 49740224 of size 64
+		MO3768[64] allocated at __user_main():  %buffer = alloca [64 x i8]

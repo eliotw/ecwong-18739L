@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <klee/klee.h>
 
 void give_shell(){
     gid_t gid = getegid();
@@ -14,6 +15,7 @@ void vuln(char *input){
     strcpy(buf, input);
 
     if (secret == 0xc0deface){
+        klee_assert(0);
         give_shell();
     }else{
         printf("The secret is %x\n", secret);

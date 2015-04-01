@@ -1,8 +1,3 @@
-KLEE: WARNING: undefined reference to function: fgets
 KLEE: WARNING: undefined reference to function: printf
 KLEE: WARNING: undefined reference to function: puts
-KLEE: WARNING: undefined reference to variable: stdin
-KLEE: WARNING: undefined reference to function: trim
-KLEE: WARNING ONCE: calling external: printf(52203520)
-KLEE: WARNING ONCE: calling external: fgets(52124768, 10, 46934934165056)
-KLEE: WARNING ONCE: calling external: trim(52124768)
+KLEE: WARNING ONCE: calling external: puts(40287456)

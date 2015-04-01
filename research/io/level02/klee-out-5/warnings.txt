@@ -1,8 +1,5 @@
-KLEE: WARNING: undefined reference to function: atoi
-KLEE: WARNING: undefined reference to function: printf
-KLEE: WARNING: undefined reference to function: puts
-KLEE: WARNING: undefined reference to function: setresuid
-KLEE: WARNING: undefined reference to function: signal
-KLEE: WARNING ONCE: calling external: printf(34944560)
-KLEE: WARNING ONCE: calling external: puts(34944336)
-KLEE: WARNING ONCE: calling external: atoi(35121648)
+KLEE: WARNING: undefined reference to function: __xstat64
+KLEE: WARNING: undefined reference to function: lseek64
+KLEE: WARNING ONCE: calling external: syscall(16, 0, 21505, 45915088)
+KLEE: WARNING ONCE: calling __user_main with extra arguments.
+KLEE: WARNING ONCE: calling external: __xstat64(1, 45828896, 45951120)

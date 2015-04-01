@@ -1,0 +1,15 @@
+Error: memory error: out of bound pointer
+File: /home/ecwong/klee-uclibc/libc/string/strcpy.c
+Line: 27
+assembly.ll line: 1857
+Stack: 
+	#000001857 in strcpy (s1=45417472, s2=45347536) at /home/ecwong/klee-uclibc/libc/string/strcpy.c:27
+	#100000222 in __user_main (argc=3, argv=36837648)
+	#200001000 in __uClibc_main (main=35338304, argc=3, argv=36837648, app_init=0, app_fini=0, rtld_fini=0, stack_end=0) at /home/ecwong/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#300003846 in main (=3, =36837648)
+Info: 
+	address: 45417600
+	next: object at 45446016 of size 8
+		MO3785[8] allocated at strcpy():  %0 = alloca i8*
+	prev: object at 45417472 of size 128
+		MO3776[128] allocated at __user_main():  %buf = alloca [128 x i8]

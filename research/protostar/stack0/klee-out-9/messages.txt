@@ -1,0 +1,2 @@
+KLEE: ERROR: /home/ecwong/klee/runtime/POSIX/klee_init_env.c:24: --sym-files expects two integer arguments <no-sym-files> <sym-file-len>
+KLEE: NOTE: now ignoring this error at this location

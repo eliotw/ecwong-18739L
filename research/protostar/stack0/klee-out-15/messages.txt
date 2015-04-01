@@ -1,0 +1,2 @@
+KLEE: ERROR: /home/ecwong/klee-uclibc/libc/stdio/gets.c:28: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location
