@@ -1,0 +1,5 @@
+setuid executable with no read permissions
+
+Use ptrace program "xocopy" to discover the hidden string"
+
+pass: aathaeyiew
