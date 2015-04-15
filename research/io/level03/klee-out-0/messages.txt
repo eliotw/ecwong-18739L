@@ -1,2 +1,0 @@
-KLEE: ERROR: /home/ecwong/Documents/18-739L/research/io/level03/level03.c:29: calling function with too few arguments
-KLEE: NOTE: now ignoring this error at this location

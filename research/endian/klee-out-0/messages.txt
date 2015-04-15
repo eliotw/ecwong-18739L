@@ -1,2 +1,0 @@
-KLEE: ERROR: /home/ecwong/Documents/ecwong/research/endian/endian.c:25: external call with symbolic argument: printf
-KLEE: NOTE: now ignoring this error at this location

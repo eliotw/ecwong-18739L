@@ -1,6 +1,0 @@
-KLEE: WARNING: undefined reference to function: __xstat64
-KLEE: WARNING: undefined reference to function: printf
-KLEE: WARNING: undefined reference to function: puts
-KLEE: WARNING ONCE: calling external: __xstat64(1, 46867648, 43730944)
-KLEE: WARNING ONCE: calling external: printf(46000304, 48370912)
-KLEE: WARNING ONCE: calling external: puts(45771488)

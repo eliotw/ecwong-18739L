@@ -1,7 +1,0 @@
-Error: failed external call: trim
-File: /home/ecwong/Documents/18-739L/research/endian/endian.c
-Line: 19
-assembly.ll line: 61
-Stack: 
-	#000000061 in orig_main (str_answer=52124768) at /home/ecwong/Documents/18-739L/research/endian/endian.c:19
-	#100000032 in main () at /home/ecwong/Documents/18-739L/research/endian/endian.c:9

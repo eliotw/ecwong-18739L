@@ -1,7 +1,0 @@
-KLEE: WARNING: undefined reference to function: __xstat64
-KLEE: WARNING: undefined reference to function: lseek64
-KLEE: WARNING ONCE: calling external: syscall(16, 0, 21505, 43076960)
-KLEE: WARNING ONCE: calling external: __xstat64(1, 44868160, 44619248)
-KLEE: WARNING ONCE: calling external: printf(44482128, 40504320)
-KLEE: WARNING ONCE: __libc_sigaction: silently ignoring
-KLEE: WARNING: __user_main: ignoring (ENOMEM)

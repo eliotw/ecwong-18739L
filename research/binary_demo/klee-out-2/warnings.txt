@@ -1,6 +1,0 @@
-KLEE: WARNING: undefined reference to function: printf
-KLEE: WARNING: undefined reference to function: puts
-KLEE: WARNING: undefined reference to function: strcmp
-KLEE: WARNING ONCE: calling external: printf(46254416, 46085664)
-KLEE: WARNING ONCE: calling external: puts(46240768)
-KLEE: WARNING ONCE: calling external: strcmp(46250304, 46084795)

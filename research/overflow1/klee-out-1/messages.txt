@@ -1,1 +1,0 @@
-KLEE: ERROR: /home/ecwong/klee-uclibc/libc/string/strcpy.c:27: memory error: out of bound pointer

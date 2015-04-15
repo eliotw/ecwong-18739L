@@ -1,8 +1,0 @@
-KLEE: WARNING: undefined reference to function: __xstat64
-KLEE: WARNING: undefined reference to function: printf
-KLEE: WARNING: undefined reference to function: puts
-KLEE: WARNING: undefined reference to function: strcmp
-KLEE: WARNING ONCE: calling external: __xstat64(1, 52678160, 52743648)
-KLEE: WARNING ONCE: calling external: printf(52845568, 53832256)
-KLEE: WARNING ONCE: calling external: puts(52739168)
-KLEE: WARNING ONCE: calling external: strcmp(53323776, 52621323)
