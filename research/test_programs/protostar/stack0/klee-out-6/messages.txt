@@ -1,0 +1,1 @@
+KLEE: ERROR: /home/ecwong/klee-uclibc/libc/string/memcpy.c:29: memory error: out of bound pointer

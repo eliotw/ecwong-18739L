@@ -1,0 +1,21 @@
+klee --libc=uclibc -posix-runtime -emit-all-errors narnia2.o -sym-arg 128
+PID: 26798
+Started: 2015-04-01 00:48:48
+BEGIN searcher description
+<InterleavedSearcher> containing 2 searchers:
+RandomPathSearcher
+WeightedRandomSearcher::CoveringNew
+</InterleavedSearcher>
+END searcher description
+Finished: 2015-04-01 00:48:55
+Elapsed: 00:00:07
+KLEE: done: explored paths = 129
+KLEE: done: avg. constructs per query = 393
+KLEE: done: total queries = 386
+KLEE: done: valid queries = 0
+KLEE: done: invalid queries = 386
+KLEE: done: query cex = 386
+
+KLEE: done: total instructions = 20191
+KLEE: done: completed paths = 129
+KLEE: done: generated tests = 129

@@ -1,0 +1,13 @@
+Error: memory error: out of bound pointer
+File: /home/ecwong/klee/runtime/Intrinsic/memcpy.c
+Line: 17
+assembly.ll line: 1259
+Stack: 
+	#000001259 in memcpy (destaddr=50869216, srcaddr=50265536, len=20) at /home/ecwong/klee/runtime/Intrinsic/memcpy.c:17
+	#100000923 in main (argc=3, argv=50956464)
+Info: 
+	address: 50869232
+	next: object at 50895008 of size 0
+		MO228[0] allocated at main():  %226 = call noalias i8* @malloc(i64 %225) nounwind
+	prev: object at 50869216 of size 16
+		MO115[16] allocated at main():  %buf1.i = alloca [16 x i8], align 1

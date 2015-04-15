@@ -1,0 +1,5 @@
+Error: wrong size given to klee_make_symbolic[_name]
+Stack: 
+	#000000214 in __user_main (argc=1, argv=60683568)
+	#100001011 in __uClibc_main (main=52463040, argc=1, argv=60683568, app_init=0, app_fini=0, rtld_fini=0, stack_end=0) at /home/ecwong/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#200004324 in main (=1, =60683568)
