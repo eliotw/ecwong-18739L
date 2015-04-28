@@ -1,2 +1,5 @@
 klee --optimize --libc=klee -posix-runtime binary_demo1.o -sym-arg 25 
 llvm-gcc -I ~/klee/include --emit-llvm -c level02.c
+
+
+llvm-gcc -m32 -fno-stack-protector -I ~/klee/include/ --emit-llvm -c stack0.c
