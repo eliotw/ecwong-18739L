@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdint.h>
 #include <stdlib.h>
-#include <klee/klee.h>
 
 int main(int argc, char **argv) {
 
@@ -9,13 +8,7 @@ int main(int argc, char **argv) {
     char* str_answer = calloc(1, answer_size);
 
     printf("Access Code: ");
-    char * sym_data = malloc(answer_size);
-    klee_make_symbolic(sym_data, answer_size, "sym_data");
-    sym_data[answer_size-1] = '\0';
-    
-    memcpy(str_answer, sym_data, answer_size);
-
-    //fgets(str_answer, answer_size, stdin);
+    fgets(str_answer, answer_size, stdin);
 
     int32_t* answer = (int32_t*)str_answer;
 
